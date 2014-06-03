@@ -4,6 +4,36 @@
 
 → [Qiita Widgetのコードを取得する](http://qiita-widget.suin.org/)
 
+## ビルド
+
+nodebrewとnodeをインストール
+
+```
+$ curl -L git.io/nodebrew | perl - setup
+```
+
+``~/.nodebrew/current/bin`` にPATHを通す
+
+nodeをインストール
+
+```
+$ nodebrew install-binary v0.11.13
+```
+
+recess, coffee-script, uglify-jsをグローバルインストール
+
+```
+$ npm -g install recess
+$ npm -g install coffee-script
+$ npm -g install uglify-js
+```
+
+ビルド
+
+```
+$ ./compile.php
+```
+
 ## 使い方
 
 ```html
