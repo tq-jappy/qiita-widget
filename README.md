@@ -28,10 +28,10 @@ $ npm -g install coffee-script
 $ npm -g install uglify-js
 ```
 
-ビルド
+コンパイル
 
 ```
-$ ./compile.php
+$ ./compile.php > script.js
 ```
 
 ## 使い方
