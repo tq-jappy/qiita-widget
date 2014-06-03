@@ -22,7 +22,7 @@ class ItemRepository
 		if username of @itemContainer
 			callback @itemContainer[username]
 			return
-		corsRequest "https://qiita.com/api/v1/users/#{username}/items?per_page=10", (rows) =>
+		corsRequest "https://qiita.com/api/v1/users/#{username}/items?per_page=5", (rows) =>
 			@itemContainer[username] = []
 			for row in rows
 				@itemContainer[username].push(new Item(row))
