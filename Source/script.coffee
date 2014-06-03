@@ -104,13 +104,6 @@ template = """
 </style>
 </head>
 <body>
-<div class="bar">
-	<a href="http://qiita.com" class="logo" target="_blank"></a>
-	<a href="" class="user" id="user_url" target="_blank">
-		<img class="avatar" src="#" id="user_avatar">
-		<span class="username" id="user_name"></span>
-	</a>
-</div>
 <div class="items" id="items"></div>
 </body>
 </html>
@@ -137,16 +130,11 @@ main = ->
 			doc.write(template)
 			doc.close()
 
-			setInnerText doc.getElementById('user_name'), username
 			itemsBlock = doc.getElementById('items')
 
 			# fetch data
 			itemRepository = new ItemRepository()
 			itemRepository.findByUsername username, (items) ->
-				if items.length > 0
-					doc.getElementById('user_avatar').setAttribute('src', items[0].user.profileImageUrl)
-					doc.getElementById('user_url').setAttribute('href', items[0].user.url)
-
 				for item in items
 					itemElement = document.createElement('div')
 					itemElement.setAttribute('class', 'item')
