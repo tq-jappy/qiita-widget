@@ -36,6 +36,8 @@ $ ./compile.php > script.js
 
 ``source/script.coffee``, ``source/style.css`` を変更し、随時コンパイル
 
+簡単な動作確認は ``example.html`` をブラウザで見ればよい。
+
 ## 使い方
 
 ```html
