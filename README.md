@@ -34,6 +34,8 @@ $ npm -g install uglify-js
 $ ./compile.php > script.js
 ```
 
+``source/script.coffee``, ``source/style.css`` を変更し、随時コンパイル
+
 ## 使い方
 
 ```html
